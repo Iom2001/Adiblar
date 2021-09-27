@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.InfoFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.Adiblar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/layout_back_color"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/item_back_color"
+            app:expandedTitleGravity="bottom"
+            app:expandedTitleMarginBottom="@dimen/_25sdp"
+            app:expandedTitleMarginStart="@dimen/_25sdp"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="@string/app_name">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/back_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="120dp"
+                app:contentInsetRight="0dp"
+                app:layout_collapseMode="pin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_close"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        app:cardBackgroundColor="@color/item_back_color"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/close"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackgroundBorderless"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_back_icon"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/search_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/search_edt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/search_lay_back"
+                        android:gravity="center_vertical"
+                        android:hint="@string/search_hint_text"
+                        android:inputType="textShortMessage"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/_12sdp"
+                        android:paddingRight="@dimen/_40sdp"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintWidth_percent="0.95" />
+
+                    <ImageView
+                        android:id="@+id/search_close"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_delete_search_text"
+                        app:layout_constraintBottom_toBottomOf="@id/search_edt"
+                        app:layout_constraintRight_toRightOf="@id/search_edt"
+                        app:layout_constraintTop_toTopOf="@id/search_edt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/save_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginLeft="@dimen/_150sdp"
+                android:layout_marginTop="10dp"
+                app:layout_collapseMode="pin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        app:cardBackgroundColor="@color/item_back_color"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.95"
+                        app:layout_constraintRight_toLeftOf="@id/search_text"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/save_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/save_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="13dp"
+                                android:src="@drawable/ic_unselected_icon_info" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/search_text"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/item_back_color"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.95"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/search_icon"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackgroundBorderless"
+                                android:padding="13dp"
+                                android:src="@drawable/ic_search" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/life_time"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/sf_pro_display"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="1821-1881"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal"
+                app:layout_collapseMode="parallax" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout_back_color"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:background="@drawable/info_lay_back">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/writer_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@drawable/img_info_back"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loadplaceholder"
+                        app:layout_constraintDimensionRatio="2:1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.athkalia.emphasis.EmphasisTextView
+                        android:id="@+id/writer_info_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/item_back_color"
+                        android:fontFamily="@font/sf_pro_display"
+                        android:padding="@dimen/_10sdp"
+                        android:text="Abdulla Oripov — ardoqli oʻzbek shoiri va jamoat arbobi. Zamonaviy oʻzbek sheʼriyatida inson qalbidagi murakkablik va ziddiyatlarni teran, haqqoniy oʻziga xos betakror kuylagan taniqli ijodkor. Oripov hozirgi oʻzbek sheʼriyatiga yangicha badiiy tafakkur yoʻsinlarini olib kirdi. U tub mohiyati bilan Yassaviy, Navoiy, Bobur, Choʻlpon, Gʻafur Gʻulom singari ijodkorlar badiiy anʼanalarining davomchisi hisoblanadi. Shoir Oʻzbekiston Respublikasi Davlat madhiyasi sheʼri muallifidir.Ana shunday goʻzal maskanda tugʻilib oʻsgan Abdulla Oripovning otasi Orifboy Ubaydulla oʻgʻli ishbilarmon dehqonlardan boʻlib, jamoa xoʻjaligi raisi edi. Onasi Turdixol momo koʻpchilik oʻzbek ayollari singari sarishta, mehnatkash, mehribon, gʻoyat taʼsirchan va ezgulikka tashna ayol boʻlgan. Oilada toʻrt oʻgʻil, toʻrt qiz boʻlib, Abdulla oʻgʻillarning kenjasi edi. Bu asarlar oʻzbek milliy sheʼriyatining mumtoz namunalari boʻlib, yuksak badiiyligi, mantiqan kuchliligi, joʻshqinligi, yoqimliligi va lirik tuygʻularga boyligi bilan ajralib turadi.
+
+Mustaqillikka erishgan Oʻzbekiston Respublikasining madhiyasi Abdulla Oripov soʻzi bilan aytiladi.
+
+Millat maʼnaviyati va estetik tafakkurini rivojlantirishdagi xizmatlari uchun shoir Abdulla Oripov ijodkorlar orasida birinchi boʻlib, 1998-yilda „Oʻzbekiston Qahramoni“ degan yuksak unvonga sazovor boʻldi.
+
+U I va II chaqiriq Oʻzbekiston Respublikasi Oliy Majlisi deputati."
+                        android:textColor="@color/main_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal"
+                        app:layout_constraintTop_toBottomOf="@+id/writer_img" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

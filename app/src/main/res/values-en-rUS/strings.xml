@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Adiblar</string>
+    <string name="adiblar">Adiblar</string>
+    <string name="saqlangan">Saqlangan</string>
+    <string name="sozlamalar">Sozlamalar</string>
+    <string name="select_lan">Tilni tanlang</string>
+    <string name="about_us">Biz haqimizda</string>
+    <string name="about_app">O\'zbek va Jahon adabiyoti\nixlosmandlari uchun ajoyib qo\'llanma.</string>
+    <string name="version_1_0_0">Version: 1.0.0</string>
+    <string name="company_uz_creater">Company: UzCreater</string>
+    <string name="developer_email">Mail: iommeom@gmail.com</string>
+    <string name="phone_number">Phone: +998 97 167 77 40</string>
+    <string name="search_hint_text">Qidiruv</string>
+    <string name="saved_writers">Saqlangan\nadiblar</string>
+    <string name="Settings">Sozlamalar</string>
+    <string name="theme_desc_text">Kunduzgi rejim</string>
+    <string name="lan_desc_tv">Dastur tili</string>
+    <string name="len_tv">O\'zbek Tili</string>
+    <string name="share_tv">Ulashish</string>
+    <string name="about_program_tv">Dastur haqida</string>
+    <string name="writer_about_tv">Adiblar\nxayoti va ijodi</string>
+    <string name="cancel_tv_text">Bekor qilish</string>
+    <string name="ok_tv_text">Ok</string>
+</resources>

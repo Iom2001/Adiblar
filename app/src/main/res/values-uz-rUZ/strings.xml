@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Adiblar</string>
+    <string name="adiblar">Aдиблар</string>
+    <string name="saqlangan">Сақланган</string>
+    <string name="sozlamalar">Созламалар</string>
+    <string name="select_lan">Тилни танланг</string>
+    <string name="about_us">Биз ҳақимизда</string>
+    <string name="about_app">Ўзбек ва Жаҳон адабиёти\nихлосмандлари учун ажойиб қўлланма.</string>
+    <string name="version_1_0_0">Версион: 1.0.0</string>
+    <string name="company_uz_creater">Cомпанй: UzCreater</string>
+    <string name="developer_email">Маил: iommeom@gmail.com</string>
+    <string name="phone_number">Телефон: +998 97 167 77 40</string>
+    <string name="search_hint_text">Қидирув</string>
+    <string name="saved_writers">Сақланган\nадиблар</string>
+    <string name="Settings">Созламалар</string>
+    <string name="theme_desc_text">Кундузги режим</string>
+    <string name="lan_desc_tv">Дастур тили</string>
+    <string name="len_tv">Ўзбек Тили</string>
+    <string name="share_tv">Улашиш</string>
+    <string name="about_program_tv">Дастур ҳақида</string>
+    <string name="writer_about_tv">Aдиблар\nхаёти ва ижоди</string>
+    <string name="cancel_tv_text">Бекор қилиш</string>
+    <string name="ok_tv_text">Ок</string>
+</resources>

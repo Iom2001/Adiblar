@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_5sdp"
+    android:paddingEnd="@dimen/_5sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/item_back_color"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/lan_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="@string/select_lan"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold|normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radio_grp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/lan_info_tv">
+
+                <RadioButton
+                    android:id="@+id/radio_latin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="  O'zbek tili"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="normal" />
+
+                <RadioButton
+                    android:id="@+id/radio_ciril"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="  Ўзбек тили"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="normal" />
+            </RadioGroup>
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@+id/radio_grp" />
+
+            <TextView
+                android:id="@+id/ok_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="@string/ok_tv_text"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal|bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space" />
+
+            <TextView
+                android:id="@+id/cancel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="@string/cancel_tv_text"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal|bold"
+                app:layout_constraintRight_toLeftOf="@+id/ok_tv"
+                app:layout_constraintTop_toBottomOf="@+id/space" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
